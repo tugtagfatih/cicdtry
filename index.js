@@ -19,7 +19,7 @@ function getServerIp() {
 const server = http.createServer((req, res) => {
   const ipAddress = getServerIp();
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end(`Sunucu IP Adresi: ${ipAddress}\n  Sunucum 4 farklı instance üzerinden çalışıyor ve load balancer ile yine bu 4 instance arasında dağıtılıyor.`);
+  res.end(`Sunucu IP Adresi: ${ipAddress}\n `);
 });
 
 // Sunucuyu başlat
