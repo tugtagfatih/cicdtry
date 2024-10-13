@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello World\n');
   res.end(`Server running at http://${hostname}:${port}/`);
-  res.end('Hello World\n');
+  res.end('Hello Worl\n');
 });
 
 server.listen(port, hostname, () => {
