@@ -19,7 +19,7 @@ function getServerIp() {
 const server = http.createServer((req, res) => {
   const ipAddress = getServerIp();
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end(`Sunucu IP Adresi: ${ipAddress}\n `);
+  res.end(`Sunucu IP Adresi: ${ipAddress}\n  Bu cicdtry repository'si ile 3 farklı ec2 instance'ı üzerinde load balancer ile çalışarak tek seferde 3 deploy yapıyorum ve websitemi 3 farklı instance üzerinden dağıtıyorum.`);
 });
 
 // Sunucuyu başlat
