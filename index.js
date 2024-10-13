@@ -1,33 +1,3 @@
-/*const http = require('http');
-
-const hostname = '0.0.0.0';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
-  res.end(`Server running at http://${hostname}:${port}/`);
-  res.end('Hello World\n');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-
-var os=require('os');
-var ifaces=os.networkInterfaces();
-for (var dev in ifaces) {
-  var alias=0;
-  ifaces[dev].forEach(function(details){
-    if (details.family=='IPv4') {
-      console.log(dev+(alias?':'+alias:''),details.address);
-      ++alias;
-    }
-  });
-}
-*/
-
 const http = require('http');
 const os = require('os');
 
@@ -50,6 +20,7 @@ const server = http.createServer((req, res) => {
   const ipAddress = getServerIp();
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end(`Sunucu IP Adresi: ${ipAddress}\n`);
+  res.end(`Sunucum 4 farklı instance üzerinden çalışıyor ve load balancer ile yine bu 4 instance arasında dağıtılıyor.`)
 });
 
 // Sunucuyu başlat
@@ -57,3 +28,4 @@ const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Sunucu ${PORT} portunda çalışıyor...`);
 });
+
