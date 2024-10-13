@@ -25,3 +25,44 @@ jobs:
           git pull
           npm install --unsafe-perm=true
           sudo pm2 restart my-app -f || pm2 start /home/ubuntu/cicdtry/index.js --name my-app -f
+
+    - name: Deploy to EC2 2
+      uses: appleboy/ssh-action@master
+      with:
+        host: 13.49.221.24  # EC2 instance IP adresiniz
+        username: ubuntu  # EC2 instance'ınızın kullanıcı adı (Amazon Linux için 'ec2-user', Ubuntu için 'ubuntu')
+        key: ${{ secrets.EC2_KEY }}  # Private key'inizi GitHub Secrets'a ekleyin ve burada çağırın
+        port: 22
+        script: |
+          cd /home/ubuntu/cicdtry  # Uygulamanın bulunduğu dizine gidin (örneğin /home/ubuntu/myapp)
+          git stash || true
+          git pull
+          npm install --unsafe-perm=true
+          sudo pm2 restart my-app -f || pm2 start /home/ubuntu/cicdtry/index.js --name my-app -f
+    - name: Deploy to EC23
+      uses: appleboy/ssh-action@master
+      with:
+        host: 13.61.2.143  # EC2 instance IP adresiniz
+        username: ubuntu  # EC2 instance'ınızın kullanıcı adı (Amazon Linux için 'ec2-user', Ubuntu için 'ubuntu')
+        key: ${{ secrets.EC2_KEY }}  # Private key'inizi GitHub Secrets'a ekleyin ve burada çağırın
+        port: 22
+        script: |
+          cd /home/ubuntu/cicdtry  # Uygulamanın bulunduğu dizine gidin (örneğin /home/ubuntu/myapp)
+          git stash || true
+          git pull
+          npm install --unsafe-perm=true
+          sudo pm2 restart my-app -f || pm2 start /home/ubuntu/cicdtry/index.js --name my-app -f
+    - name: Deploy to EC2 4
+      uses: appleboy/ssh-action@master
+      with:
+        host: 13.60.211.207  # EC2 instance IP adresiniz
+        username: ubuntu  # EC2 instance'ınızın kullanıcı adı (Amazon Linux için 'ec2-user', Ubuntu için 'ubuntu')
+        key: ${{ secrets.EC2_KEY }}  # Private key'inizi GitHub Secrets'a ekleyin ve burada çağırın
+        port: 22
+        script: |
+          cd /home/ubuntu/cicdtry  # Uygulamanın bulunduğu dizine gidin (örneğin /home/ubuntu/myapp)
+          git stash || true
+          git pull
+          npm install --unsafe-perm=true
+          sudo pm2 restart my-app -f || pm2 start /home/ubuntu/cicdtry/index.js --name my-app -f
+
