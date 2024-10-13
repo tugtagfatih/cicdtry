@@ -24,4 +24,4 @@ jobs:
           git stash || true
           git pull
           npm install --unsafe-perm=true
-          sudo pm2 restart my-app || pm2 start /home/ubuntu/cicdtry/index.js --name my-app
+          sudo pm2 restart my-app -f || pm2 start /home/ubuntu/cicdtry/index.js --name my-app
