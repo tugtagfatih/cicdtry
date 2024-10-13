@@ -20,7 +20,7 @@ jobs:
         key: ${{ secrets.EC2_KEY }}  # Private key'inizi GitHub Secrets'a ekleyin ve burada çağırın
         port: 22
         script: |
-          cd /home/ubuntu  # Uygulamanın bulunduğu dizine gidin (örneğin /home/ubuntu/myapp)
+          cd /home/ubuntu/cicdtry  # Uygulamanın bulunduğu dizine gidin (örneğin /home/ubuntu/myapp)
           sudo su
           git pull
           npm install
