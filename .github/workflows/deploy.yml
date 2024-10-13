@@ -15,9 +15,35 @@ jobs:
     - name: Deploy to EC2
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.EC2_HOST }}
+        host: 13.61.2.143
         username: ubuntu
-        key: ${{ secrets.EC2_KEY }}
+        key: `-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEAlO5mdMhI9bL1EzGC+1GSSvK6u+HEjKJvtBqVA8UZzCxw/pvs
+6HRHeQTWgWo+Di7fIr5tKEmKisJvJNkUuASqVPgO7xlKr16HJol41GkPEYd0QX15
++8SMoXuc3LA/OcpHk84sQVRFlkQhDjL9enjQ3QqOAynyt8/3DQ1eao3grVhKKuQt
+uTxUcOTJBnemK8fb9QtI5OGoW2w0+g8n4zBlj4IPqzR79FmE28aw1Jp8DG7yu2IT
+IkDk5SqRAdvSXbRGDOfrZSLIPIoCNwy8sxcez+iiyog2tX90ofnyWTdXzwGRzsXj
+BMe9UdiJ3JhWq3Z4QEZ3KixvevqA0bSayLH3owIDAQABAoIBAQCDyHxipANjXipc
+BHi5d9GyfhxcOgdYxjd/r/Hh9xu/vidyNHkqrBG+dVh2BZPJqxIJRWWDu6da53e/
+rFMYDhDGxQU57zBWA5glsol3s0sBINHvTV+ON7qU/bOs2EvqECLMGCiy2iYFNF3n
+mZkQMS3oGfnVtN2wZtZd91FvigGggF9CaXRBTB9FcR/VuUm0jVFUIAYScFYKdZ4u
+1aJqKSRu7YnwfuwUMEFYphVou0IWAPaQIXRC9ILqcfjWYh/6Q7Zyvt/7+x4El5W+
+mlDgdVLZ/NyzQJrQfz3PAMKJaujZdDmxSRz68qCGWEbXn0qt4WUnJzc4YoAd2u86
+HcNmPWVBAoGBANezczDDJ3sjSDGiZ9HsOcXdLSYk5ANqWiHU5pgTBorU7ka7R0wH
+AZySryMRxGA7ooCjNvP3nY40VnhrOaX1aEPvmKtJEk/geThR1fZzydR/Ec+XT/5X
+4BGyZCGhb3ycKLxcvCxfz36LzuXm2bnOb1sSQ8x9tU0ECKsqX5WMlQhhAoGBALDB
+fJYgiKffLEXH9N40IDcCkhq0agtK0YYA4q8Tzvmv7yE/qnSW5Kf+VLdR3e6SCsw0
+7J2L/dTjOqXFS3DMmGAmUW6v+tSUUQ2akt38I6AFgMC8/DxnjhANj7mw8fJ2GMpC
+5qgrSC0TeQ+iSKt4WvQfZrpfk0HOTFJ7SxcK9W6DAoGBAKYdTd3EvVgIkOWgpAG3
+wbpOniGdEXhL5EPfuQJuzIAIgcQ5ICw9zRDuqjAA09Ikuv4ENCLolA7a4aj1Mr1L
+ZFPFZjarHI4lWlV0OKoG++1JOsc7SWCf/jDCyHhZ4gj+HiUJ6eTmmF5lfx3wjcaZ
+Y4qoY0xNl11LeP2QsXHzhSahAoGBAK86slN232NlSVPInsYm8QT4JHYbA8I8Iylw
++UnOHnPEahIRNuAss3SkG8I9hAI+gDvf/+9UWIlT19F9nYOvISS4+CP+jHFwtEYD
+RrSRgZPjwLfS41DS7LCXcTQK6mGPmJXz6w0vE3e0hWDtZpOvVqQL+WCs3aTwaxOe
+LVwjvhsXAoGAV0JSVzwnCxijodQcTrazhFlGmZxsnkRjgtaofFD7mMTp0jnj0JF7
+PUDADQAf8GgwUe+53byZCzVq+sPkgR62A57eVZI6OtKVKGkxCYloTCGWA1JZ4wSi
+JNB0rFyxEhMeuHiDgGLSf2ibemG48UAJx+ZOI1bn7ixWz/eVxI7Mn30=
+-----END RSA PRIVATE KEY-----`
         port: 22
         script: |
           git pull
