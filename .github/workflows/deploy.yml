@@ -21,7 +21,7 @@ jobs:
         port: 22
         script: |
           cd /home/ubuntu/cicdtry  # Uygulamanın bulunduğu dizine gidin (örneğin /home/ubuntu/myapp)
-          sudo su
+          git stash || true
           git pull
-          npm install
-          pm2 restart index.js  # Uygulamanızın giriş dosyasına göre güncelleyin, örneğin 'app.js' olabilir
+          npm install --unsafe-perm=true
+          pm2 restart my-app || pm2 start /home/ubuntu/cicdtry/index.js --name my-app
